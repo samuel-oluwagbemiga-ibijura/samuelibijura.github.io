@@ -89,13 +89,16 @@ h2 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); line-height
 .proj-body { font-size: 13px; color: var(--ink-muted); line-height: 1.65; margin-bottom: 11px; }
 .proj-stack { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
 .proj-tool { font-size: 11px; color: var(--ink-muted); border: 1px solid var(--rule); padding: 2px 8px; border-radius: 2px; }
-.forage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
-.forage-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; }
-.forage-org { font-size: 12px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-.forage-title { font-size: 11px; color: var(--green); margin-bottom: 8px; }
-.forage-tasks { margin: 0; padding-left: 14px; list-style: disc; }
-.forage-tasks li { font-size: 11px; color: var(--ink-muted); line-height: 1.5; margin-bottom: 2px; }
-.forage-date { font-size: 10px; color: var(--ink-faint); margin-top: 8px; }
+
+/* Enhanced 2x2 / Responsive Grid Layout for 4 Items */
+.forage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; }
+.forage-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.forage-org { font-size: 12px; font-weight: 500; color: var(--ink); margin-bottom: 4px; letter-spacing: 0.03em; }
+.forage-title { font-size: 13px; font-weight: 500; color: var(--green); margin-bottom: 10px; }
+.forage-tasks { margin: 0 0 14px 0; padding-left: 14px; list-style: disc; }
+.forage-tasks li { font-size: 12px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 4px; }
+.forage-date { font-size: 10px; color: var(--ink-faint); margin-top: auto; border-top: 1px solid var(--rule); padding-top: 8px; }
+
 #contact { background: var(--paper-warm); border-top: 1px solid var(--rule); padding: 80px 6%; width: 100%; }
 .contact-inner { max-width: 960px; margin: 0 auto; }
 #contact h2 { color: var(--ink); margin-bottom: 12px; }
@@ -176,7 +179,7 @@ footer { background: var(--paper-warm); border-top: 1px solid var(--rule); paddi
       <div class="about-body">
         <p>I am an information security professional transitioning into <strong>Governance, Risk and Compliance</strong>, with a foundation built in security operations — log analysis, SIEM monitoring, malware investigation, and network traffic analysis at Hybrid Security Consults and Bincom Global. That background matters: I understand the threats governance frameworks are designed to stop, not just what the controls say.</p>
         <p>My view on security is simple. The strongest posture is one that prevents incidents before they happen. That is what drew me to GRC — it is where the real prevention work lives, in the risk assessments, the policies, the controls, and the governance structures built before anything goes wrong.</p>
-        <p>Alongside formal roles and job simulations with Mastercard, Commonwealth Bank, and Tata Consultancy Services, I built a five-project GRC portfolio applied to CyroPay — a fictional UK payment fintech. The work covers a full ISO 27001:2022 gap assessment across 93 controls, ten mapped information security policies, a DORA-aligned vendor risk assessment, a GDPR DPIA for a biometric authentication feature, and a board-level risk presentation. Every deliverable was produced using real frameworks and industry tools. The work is live on GitHub.</p>
+        <p>Alongside formal roles and job simulations with PwC, EY, Mastercard, and Commonwealth Bank, I built a five-project GRC portfolio applied to CyroPay — a fictional UK payment fintech. The work covers a full ISO 27001:2022 gap assessment across 93 controls, ten mapped information security policies, a DORA-aligned vendor risk assessment, a GDPR DPIA for a biometric authentication feature, and a board-level risk presentation. Every deliverable was produced using real frameworks and industry tools. The work is live on GitHub.</p>
       </div>
       <div>
         <div class="section-label" style="margin-bottom:14px">Education</div>
@@ -241,37 +244,62 @@ footer { background: var(--paper-warm); border-top: 1px solid var(--rule); paddi
     <div style="margin-top:40px">
       <div class="section-label" style="margin-bottom:16px">Forage job simulations</div>
       <div class="forage-grid">
+        
         <div class="forage-card">
-          <div class="forage-org">Mastercard</div>
-          <div class="forage-title">Cybersecurity Job Simulation</div>
-          <ul class="forage-tasks">
-            <li>Designed a phishing email simulation</li>
-            <li>Interpreted simulation results to assess organisational security awareness</li>
-            <li>Recommended targeted training interventions based on results</li>
-          </ul>
-          <div class="forage-date">February 2025</div>
+          <div>
+            <div class="forage-org">PwC US</div>
+            <div class="forage-title">Audit &amp; Risk Control Simulation</div>
+            <ul class="forage-tasks">
+              <li>Executed control testing of a client's core purchasing and procurement processes</li>
+              <li>Mapped operational workflows into clear visual process flowcharts</li>
+              <li>Constructed an enterprise Risk Control Matrix (RCM) to identify compliance gaps</li>
+              <li>Compiled thorough audit walkthrough documentation and control findings</li>
+            </ul>
+          </div>
+          <div class="forage-date">June 2026</div>
         </div>
+
         <div class="forage-card">
-          <div class="forage-org">Commonwealth Bank</div>
-          <div class="forage-title">Introduction to Cybersecurity</div>
-          <ul class="forage-tasks">
-            <li>Built Splunk dashboards for fraud detection in historical data</li>
-            <li>Responded to simulated cybersecurity incidents end-to-end</li>
-            <li>Conducted penetration testing of web applications</li>
-            <li>Designed security awareness materials for password management</li>
-          </ul>
+          <div>
+            <div class="forage-org">EY</div>
+            <div class="forage-title">Technology Risk Simulation</div>
+            <ul class="forage-tasks">
+              <li>Analyzed typical corporate IT processes and structural technology risks</li>
+              <li>Evaluated internal controls using professional skepticism and industry frameworks</li>
+              <li>Mastered client interview mechanics, distinguishing probing vs. non-probing questions</li>
+              <li>Applied analytical risk assessments to complex corporate technology environments</li>
+            </ul>
+          </div>
+          <div class="forage-date">June 2026</div>
+        </div>
+
+        <div class="forage-card">
+          <div>
+            <div class="forage-org">Commonwealth Bank</div>
+            <div class="forage-title">Introduction to Cybersecurity</div>
+            <ul class="forage-tasks">
+              <li>Built Splunk dashboards for fraud detection in historical data</li>
+              <li>Responded to simulated cybersecurity incidents end-to-end</li>
+              <li>Conducted penetration testing of web applications</li>
+              <li>Designed security awareness materials for password management</li>
+            </ul>
+          </div>
           <div class="forage-date">March 2025</div>
         </div>
+
         <div class="forage-card">
-          <div class="forage-org">Tata Consultancy Services</div>
-          <div class="forage-title">Cybersecurity Analyst Simulation</div>
-          <ul class="forage-tasks">
-            <li>Conducted IAM strategy assessment for a consulting engagement</li>
-            <li>Designed custom IAM solutions aligned to business objectives</li>
-            <li>Produced technical documentation and client-facing presentations</li>
-          </ul>
+          <div>
+            <div class="forage-org">Mastercard</div>
+            <div class="forage-title">Cybersecurity Simulation</div>
+            <ul class="forage-tasks">
+              <li>Designed enterprise phishing email testing simulations to gauge baseline posture</li>
+              <li>Interpreted behavioral simulation metrics to assess organizational human-risk</li>
+              <li>Recommended targeted training interventions and awareness frameworks to management</li>
+            </ul>
+          </div>
           <div class="forage-date">February 2025</div>
         </div>
+
       </div>
     </div>
   </div>
